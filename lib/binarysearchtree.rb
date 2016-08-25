@@ -96,7 +96,7 @@ class BinarySearchTree
 
   def max_traverse(max_node)
     if max_node.right_link.nil?
-      max_node.score
+      {max_node.score => max_node.title}
     else
       max_node = max_node.right_link
       max_traverse(max_node)
@@ -110,7 +110,7 @@ class BinarySearchTree
 
   def min_traverse(min_node)
     if min_node.left_link.nil?
-      min_node.score
+      {min_node.score => min_node.title}
     else
       min_node = min_node.left_link
       min_traverse(min_node)
