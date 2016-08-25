@@ -138,38 +138,38 @@ class BinarySearchTree
     return counter
   end
 
-  def sort
-    sort_node = @root
-    sorted_collect = Array.new
-    sort_traverse(sort_node, sorted_collect)
-  end
-
-  def sort_traverse(sort_node, sorted_collect)
-    binding.pry
-    if sort_node.left_link == nil && sort_node.sorted == false
-      sorted_collect = sorted_collect << {sort_node.score => sort_node.title}
-      sort_node.sorted = true
-      return sorted_collect
-    elsif sort_node.right_link == nil && sort_node.sorted == false
-      sorted_collect = sorted_collect << {sort_node.score => sort_node.title}
-      sort_node.sorted = true
-      return sorted_collect
-    elsif sort_node.left_link == nil && sort_node.sorted == true
-      sort_node = sort_node.right_link
-
-      sort_traverse(sort_node, sorted_collect)
-
-    elsif sort_node.left_link.nil? == false
-      sort_node = sort_node.left_link
-
-      sort_traverse(sort_node, sorted_collect)
-
-    elsif sort_node.right_link.nil? == false
-      sort_node = sort_node.right_link
-
-      sort_traverse(sort_node, sorted_collect)
-    end
-  end
+  # def sort
+  #   sort_node = @root
+  #   sorted_collect = Array.new
+  #   sort_traverse(sort_node, sorted_collect)
+  # end
+  #
+  # def sort_traverse(sort_node, sorted_collect)
+  #   binding.pry
+  #   if sort_node.left_link == nil && sort_node.sorted == false
+  #     sorted_collect = sorted_collect << {sort_node.score => sort_node.title}
+  #     sort_node.sorted = true
+  #     return sorted_collect
+  #   elsif sort_node.right_link == nil && sort_node.sorted == false
+  #     sorted_collect = sorted_collect << {sort_node.score => sort_node.title}
+  #     sort_node.sorted = true
+  #     return sorted_collect
+  #   elsif sort_node.left_link == nil && sort_node.sorted == true
+  #     sort_node = sort_node.right_link
+  #
+  #     sort_traverse(sort_node, sorted_collect)
+  #
+  #   elsif sort_node.left_link.nil? == false
+  #     sort_node = sort_node.left_link
+  #
+  #     sort_traverse(sort_node, sorted_collect)
+  #
+  #   elsif sort_node.right_link.nil? == false
+  #     sort_node = sort_node.right_link
+  #
+  #     sort_traverse(sort_node, sorted_collect)
+  #   end
+  # end
 
 
 end
